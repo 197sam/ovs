@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Vote, Lock, User } from 'lucide-react';
+import StudentRegistration from './StudentRegistration';
 
 const Login: React.FC = () => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showRegistration, setShowRegistration] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+
+  if (showRegistration) {
+    return <StudentRegistration onBack={() => setShowRegistration(false)} />;
+  }
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,10 +48,13 @@ const Login: React.FC = () => {
           </div>
           
           <nav className="space-y-4">
-            <div className="flex items-center p-3 rounded-lg bg-white/20 backdrop-blur-sm">
+            <button 
+              onClick={() => setShowRegistration(true)}
+              className="w-full flex items-center p-3 rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
+            >
               <User size={20} className="mr-3" />
-              <span>New Registration</span>
-            </div>
+              <span>Register Student</span>
+            </button>
             <div className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
               <Lock size={20} className="mr-3" />
               <span>Logout</span>
