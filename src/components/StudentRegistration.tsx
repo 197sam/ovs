@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Lock, IdCard, Hash, ArrowLeft } from 'lucide-react';
+import { User, Lock, Car as IdCard, Hash, ArrowLeft } from 'lucide-react';
 
 interface StudentRegistrationProps {
   onBack: () => void;
