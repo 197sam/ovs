@@ -58,8 +58,7 @@ const VoterDashboard: React.FC = () => {
         </div>
 
         {/* Election Status */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
+        <div className="bg-white p-6 rounded-xl shadow-sm border">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Active Elections</h2>
             <div className="space-y-4">
               <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
@@ -86,34 +85,6 @@ const VoterDashboard: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
-            <div className="space-y-3">
-              <button 
-                onClick={() => window.location.href = '/voter/cast-vote'}
-                className="w-full flex items-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
-              >
-                <Vote size={20} className="mr-3" />
-                Cast Your Vote
-              </button>
-              <button 
-                onClick={() => window.location.href = '/voter/pending-elections'}
-                className="w-full flex items-center p-3 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors"
-              >
-                <Clock size={20} className="mr-3" />
-                View Pending Elections
-              </button>
-              <button 
-                onClick={() => window.location.href = '/results'}
-                className="w-full flex items-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
-              >
-                <BarChart3 size={20} className="mr-3" />
-                View Results
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>

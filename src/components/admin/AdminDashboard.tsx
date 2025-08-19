@@ -70,8 +70,7 @@ const AdminDashboard: React.FC = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
+        <div className="bg-white p-6 rounded-xl shadow-sm border">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Elections</h2>
             <div className="space-y-3">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -93,34 +92,6 @@ const AdminDashboard: React.FC = () => {
                 </span>
               </div>
             </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-sm border">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
-            <div className="space-y-3">
-              <button 
-                onClick={() => window.location.href = '/admin/add-candidate'}
-                className="w-full flex items-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
-              >
-                <UserPlus size={20} className="mr-3" />
-                Add New Candidate
-              </button>
-              <button 
-                onClick={() => window.location.href = '/admin/new-election'}
-                className="w-full flex items-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
-              >
-                <Calendar size={20} className="mr-3" />
-                Create New Election
-              </button>
-              <button 
-                onClick={() => window.location.href = '/results'}
-                className="w-full flex items-center p-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors"
-              >
-                <BarChart3 size={20} className="mr-3" />
-                View Results
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
