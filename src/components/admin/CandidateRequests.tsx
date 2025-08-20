@@ -45,6 +45,29 @@ const CandidateRequests: React.FC = () => {
     }
   ]);
 
+  // Add some pre-login requests to demonstrate the feature
+  React.useEffect(() => {
+    // Simulate receiving pre-login candidate requests
+    const preLoginRequests = [
+      {
+        id: 4,
+        fullName: 'David Wilson',
+        studentId: 'STU004',
+        email: 'david.wilson@university.edu',
+        phone: '+1-555-0126',
+        electionType: 'Student Council',
+        party: 'Independent',
+        experience: 'Class representative for 2 years, organized charity events',
+        manifesto: 'Focus on student mental health and campus sustainability',
+        status: 'pending',
+        submittedAt: '2024-01-16T11:45:00Z'
+      }
+    ];
+    
+    // Add pre-login requests to the existing requests (in a real app, this would come from an API)
+    setRequests(prev => [...prev, ...preLoginRequests]);
+  }, []);
+
   const [selectedRequest, setSelectedRequest] = useState<any>(null);
 
   const menuItems = [

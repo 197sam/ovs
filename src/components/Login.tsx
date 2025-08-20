@@ -3,17 +3,23 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Vote, Lock, User } from 'lucide-react';
 import StudentRegistration from './StudentRegistration';
+import PreLoginCandidateForm from './PreLoginCandidateForm';
 
 const Login: React.FC = () => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [showRegistration, setShowRegistration] = useState(false);
+  const [showCandidateForm, setShowCandidateForm] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
   if (showRegistration) {
     return <StudentRegistration onBack={() => setShowRegistration(false)} />;
+  }
+
+  if (showCandidateForm) {
+    return <PreLoginCandidateForm onBack={() => setShowCandidateForm(false)} />;
   }
 
   const handleLogin = (e: React.FormEvent) => {
@@ -54,6 +60,13 @@ const Login: React.FC = () => {
             >
               <User size={20} className="mr-3" />
               <span>Register Student</span>
+            </button>
+            <button 
+              onClick={() => setShowCandidateForm(true)}
+              className="w-full flex items-center p-3 rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
+            >
+              <Vote size={20} className="mr-3" />
+              <span>Apply for Candidacy</span>
             </button>
             <div className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
               <Lock size={20} className="mr-3" />
