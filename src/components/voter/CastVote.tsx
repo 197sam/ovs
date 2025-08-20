@@ -9,6 +9,7 @@ const CastVote: React.FC = () => {
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
     { label: 'Pending Elections', icon: <Clock size={20} />, path: '/voter/pending-elections' },
+    { label: 'Request Candidacy', icon: <User size={20} />, path: '/voter/request-candidacy' },
     { label: 'Results', icon: <BarChart3 size={20} />, path: '/results' },
   ];
 

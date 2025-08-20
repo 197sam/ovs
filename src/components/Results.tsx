@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './shared/Layout';
 import { useAuth } from '../context/AuthContext';
-import { BarChart3, Calendar, Home, UserPlus, Users, Vote, Clock, TrendingUp } from 'lucide-react';
+import { BarChart3, Calendar, Home, UserPlus, Users, Vote, Clock, TrendingUp, FileText, User } from 'lucide-react';
 
 const Results: React.FC = () => {
   const { user } = useAuth();
@@ -10,6 +10,7 @@ const Results: React.FC = () => {
   const adminMenuItems = [
     { label: 'Dashboard', icon: <Users size={20} />, path: '/admin' },
     { label: 'Add Candidate', icon: <UserPlus size={20} />, path: '/admin/add-candidate' },
+    { label: 'Candidate Requests', icon: <FileText size={20} />, path: '/admin/candidate-requests' },
     { label: 'Add New Elections', icon: <Calendar size={20} />, path: '/admin/new-election' },
     { label: 'View Election Result', icon: <BarChart3 size={20} />, path: '/results' },
   ];
@@ -18,6 +19,7 @@ const Results: React.FC = () => {
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
     { label: 'Pending Elections', icon: <Clock size={20} />, path: '/voter/pending-elections' },
+    { label: 'Request Candidacy', icon: <User size={20} />, path: '/voter/request-candidacy' },
     { label: 'Results', icon: <BarChart3 size={20} />, path: '/results' },
   ];
 

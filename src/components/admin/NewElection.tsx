@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../shared/Layout';
-import { UserPlus, Calendar, BarChart3, Users, Plus, Minus } from 'lucide-react';
+import { UserPlus, Calendar, BarChart3, Users, Plus, Minus, FileText } from 'lucide-react';
 
 const NewElection: React.FC = () => {
   const [electionData, setElectionData] = useState({
@@ -14,6 +14,7 @@ const NewElection: React.FC = () => {
   const menuItems = [
     { label: 'Dashboard', icon: <Users size={20} />, path: '/admin' },
     { label: 'Add Candidate', icon: <UserPlus size={20} />, path: '/admin/add-candidate' },
+    { label: 'Candidate Requests', icon: <FileText size={20} />, path: '/admin/candidate-requests' },
     { label: 'Add New Elections', icon: <Calendar size={20} />, path: '/admin/new-election' },
     { label: 'View Election Result', icon: <BarChart3 size={20} />, path: '/results' },
   ];
