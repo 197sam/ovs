@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from '../shared/Layout';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, BarChart3, Home, Vote, Clock, Users } from 'lucide-react';
 
 const PendingElections: React.FC = () => {
+  const navigate = useNavigate();
+
   const menuItems = [
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
@@ -118,7 +121,10 @@ const PendingElections: React.FC = () => {
 
               <div className="flex space-x-3">
                 {election.status === 'upcoming' ? (
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                  <button 
+                    onClick={() => navigate('/voter/cast-vote')}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  >
                     Vote Now
                   </button>
                 ) : (

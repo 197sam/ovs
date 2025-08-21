@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from '../shared/Layout';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, BarChart3, Home, Vote, Clock, CheckCircle, Users } from 'lucide-react';
 
 const VoterDashboard: React.FC = () => {
+  const navigate = useNavigate();
+
   const menuItems = [
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
@@ -67,7 +70,10 @@ const VoterDashboard: React.FC = () => {
                     <h3 className="font-medium text-blue-900">Presidential Election 2024</h3>
                     <p className="text-sm text-blue-700">Ends: March 15, 2024</p>
                   </div>
-                  <button className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
+                  <button 
+                    onClick={() => navigate('/voter/cast-vote')}
+                    className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                  >
                     Vote Now
                   </button>
                 </div>
