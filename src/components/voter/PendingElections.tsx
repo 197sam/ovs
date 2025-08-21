@@ -1,13 +1,12 @@
 import React from 'react';
 import Layout from '../shared/Layout';
-import { Calendar, BarChart3, Home, Vote, Clock, Users, User } from 'lucide-react';
+import { Calendar, BarChart3, Home, Vote, Clock, Users } from 'lucide-react';
 
 const PendingElections: React.FC = () => {
   const menuItems = [
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
     { label: 'Pending Elections', icon: <Clock size={20} />, path: '/voter/pending-elections' },
-    { label: 'Request Candidacy', icon: <User size={20} />, path: '/voter/request-candidacy' },
     { label: 'Results', icon: <BarChart3 size={20} />, path: '/results' },
   ];
 

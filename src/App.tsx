@@ -26,7 +26,6 @@ function App() {
             <Route path="/voter" element={<ProtectedRoute role="voter"><VoterDashboard /></ProtectedRoute>} />
             <Route path="/voter/cast-vote" element={<ProtectedRoute role="voter"><CastVote /></ProtectedRoute>} />
             <Route path="/voter/pending-elections" element={<ProtectedRoute role="voter"><PendingElections /></ProtectedRoute>} />
-            <Route path="/voter/request-candidacy" element={<ProtectedRoute role="voter"><RequestCandidacy /></ProtectedRoute>} />
             <Route path="/results" element={<ProtectedRoute><Results /></ProtectedRoute>} />
             <Route path="/" element={<Navigate to="/login" replace />} />
           </Routes>

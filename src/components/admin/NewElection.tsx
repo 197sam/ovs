@@ -121,10 +121,15 @@ const NewElection: React.FC = () => {
                   required
                 >
                   <option value="">Select Election Type</option>
-                  <option value="presidential">Presidential</option>
-                  <option value="senate">Senate</option>
-                  <option value="house">House of Representatives</option>
-                  <option value="local">Local Government</option>
+                  <option value="student-president">Student Body President</option>
+                  <option value="student-vice-president">Student Body Vice President</option>
+                  <option value="student-secretary">Student Secretary</option>
+                  <option value="student-treasurer">Student Treasurer</option>
+                  <option value="class-representative">Class Representative</option>
+                  <option value="department-representative">Department Representative</option>
+                  <option value="student-council">Student Council Member</option>
+                  <option value="cultural-secretary">Cultural Secretary</option>
+                  <option value="sports-secretary">Sports Secretary</option>
                   <option value="other">Other</option>
                 </select>
               </div>

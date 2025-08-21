@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './shared/Layout';
 import { useAuth } from '../context/AuthContext';
-import { BarChart3, Calendar, Home, UserPlus, Users, Vote, Clock, TrendingUp, FileText, User } from 'lucide-react';
+import { BarChart3, Calendar, Home, UserPlus, Users, Vote, Clock, TrendingUp, FileText } from 'lucide-react';
 
 const Results: React.FC = () => {
   const { user } = useAuth();
@@ -19,7 +19,6 @@ const Results: React.FC = () => {
     { label: 'Dashboard', icon: <Home size={20} />, path: '/voter' },
     { label: 'Cast Vote', icon: <Vote size={20} />, path: '/voter/cast-vote' },
     { label: 'Pending Elections', icon: <Clock size={20} />, path: '/voter/pending-elections' },
-    { label: 'Request Candidacy', icon: <User size={20} />, path: '/voter/request-candidacy' },
     { label: 'Results', icon: <BarChart3 size={20} />, path: '/results' },
   ];
 
