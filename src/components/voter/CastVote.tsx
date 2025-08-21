@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../shared/Layout';
-import { Calendar, BarChart3, Home, Vote, Clock, Eye } from 'lucide-react';
+import { Calendar, BarChart3, Home, Vote, Clock, Eye, User } from 'lucide-react';
 
 const CastVote: React.FC = () => {
   const [selectedCandidate, setSelectedCandidate] = useState<string>('');
